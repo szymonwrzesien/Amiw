@@ -8,16 +8,7 @@ import { Component} from '@angular/core';
 export class TodolistComponent {
   newTodoTitle = '';
 
-  todos: Array<Todo> = [
-                        {
-                          title: 'zakupy',
-                          complete: true
-                        },
-                        {
-                          title: 'kino',
-                          complete: false
-                        }
-                      ];
+  todos: Array<Todo> = [];
 
 addTodo() {
   if (!this.newTodoTitle) {
@@ -32,15 +23,9 @@ addTodo() {
   }
 
   deleteTodo(index) {
-    this.todos.splice(index,1);
+    this.todos.splice(index, 1);
     }
-
-
-
 }
-
-
-
 
 interface Todo {
   title: string;
