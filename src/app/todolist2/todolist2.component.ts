@@ -8,22 +8,5 @@ import { FileDetector } from 'selenium-webdriver/remote';
 })
 export class Todolist2Component {
 
-  tasksList: Array<string> = [];
-  taskDone: Array<string> = [];
-
-  add(task: string) {
-    if (task !== '') {
-      this.tasksList.push(task);
-
-    } else {console.log('Nie wpisano zadania!'); }
-  }
-  remove(task: string) {
-    this.tasksList = this.tasksList.filter(e => e !== task);
-
-  }
-  done(task: string) {
-  this.taskDone.push(task);
-  this.remove(task);
-  }
 
 }
